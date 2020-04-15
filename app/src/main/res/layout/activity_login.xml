@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".ui.login.LoginActivity">
+
+    <ImageView
+        android:id="@+id/searchImage" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/loginGuideLeft" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/spacing_775"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/loginGuideRight" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/spacing_775"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:src="@drawable/splash_title"
+
+        app:layout_constraintStart_toStartOf="@id/loginGuideLeft"
+        app:layout_constraintEnd_toEndOf="@id/loginGuideRight"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_marginTop="@dimen/spacing_1550"
+        />
+
+    <TextView
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_250"
+        android:textColor="@color/colorWhite"
+        android:lineSpacingExtra="@dimen/font_100"
+        android:text="아르떼움을 시작하시겠습니까?"
+
+        app:layout_constraintStart_toStartOf="@id/loginGuideLeft"
+        app:layout_constraintEnd_toEndOf="@id/loginGuideRight"
+        app:layout_constraintBottom_toTopOf="@id/loginKakaoBtn"
+
+        android:layout_marginBottom="@dimen/spacing_100"
+        />
+
+    <ImageView
+        android:id="@+id/loginKakaoBtn" android:layout_width="0dp" android:layout_height="wrap_content"
+        android:src="@drawable/login_kakao"
+
+        app:layout_constraintStart_toStartOf="@id/loginGuideLeft"
+        app:layout_constraintEnd_toEndOf="@id/loginGuideRight"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:layout_marginBottom="@dimen/spacing_1150"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

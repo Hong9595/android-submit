@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detailExhibition.DetailExhibitionActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/detailAppBarLayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        <!--   contentScrim으로 Toolbar 색 지정   -->
+        <!--   exitUntilCollapsed로 scroll내릴시에 child view 삭제. Toolbar 크기만큼 상단에 유지됨     -->
+        <!--   Toolbar가 pin이므로 Toolbar는 사라지지 않고 고정     -->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent" android:layout_height="456dp"
+            app:contentScrim="@color/black_900"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/detailExhibitionImage" android:layout_width="match_parent" android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:src="@mipmap/ic_launcher"
+                app:layout_collapseMode="parallax"
+                />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/detailExhibitionToolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                android:background="@color/black_400"
+                >
+
+                <ImageView
+                    android:id="@+id/detailExhibitionExit" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_back_white_24dp"
+                    android:layout_gravity="start"
+
+                    android:layout_marginStart="@dimen/spacing_125"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/detailExhibitShare" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:src="@drawable/ic_share_white_24dp"
+                    android:layout_gravity="end"
+
+                    android:layout_marginEnd="@dimen/spacing_400"
+                    />
+
+                <ImageView
+                    android:id="@+id/detailExhibitScrap" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:src="@drawable/ic_bookmark_border_white_24dp"
+                    android:layout_gravity="end"
+
+                    android:layout_marginEnd="@dimen/spacing_775"
+                    />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/nested_detail_exhibition"
+            />
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

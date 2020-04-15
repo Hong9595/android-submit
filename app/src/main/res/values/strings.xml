@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ArteUm</string>
+    <string name="search_hint">검색어를 입력해주세요</string>
+    <string name="toolbar_title">Arteum</string>
+    <string name="no_search_result_1">검색 결과가 없습니다.</string>
+    <string name="no_search_result_2">검색어를 다시 입력해주세요.</string>
+    <string name="searchResultTitle">결과 타이틀</string>
+    <string name="searchResultLocation">결과 위치</string>
+    <string name="searchDetatilTitle">%s 검색 결과</string>
+
+    <string name="exhibition_title">Exhibition</string>
+
+    <string name="kakao_app_key">21aae723ff1abae45ae1f3a5111a6462</string>
+    <string name="kakao_scheme">kakao21aae723ff1abae45ae1f3a5111a6462</string>
+    <string name="kakaolink_host">kakaolink</string>
+
+    <string name="google_map_key">AIzaSyDLzh_nreh8zdrFGyAic6htdMhhVSAiW4M</string>
+
+    <string name="content_button">Push me</string>
+
+    <string name="string_exhibition_date">%s ~ %s</string>
+    <string name="string_voice_count">%s ~ %s</string>
+</resources>

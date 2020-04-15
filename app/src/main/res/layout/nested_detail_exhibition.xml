@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/detailExhibitionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_500"
+        android:textColor="@color/black_900"
+        android:textStyle="bold"
+        android:text="김순기: 게으른 구름"
+        android:paddingEnd="@dimen/spacing_250"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_marginStart="@dimen/spacing_500"
+        android:layout_marginTop="@dimen/spacing_600" />
+
+    <View
+        android:id="@+id/detailDivideView" android:layout_width="0dp" android:layout_height="@dimen/spacing_25"
+        android:background="@color/black_900"
+
+        app:layout_constraintTop_toBottomOf="@id/detailExhibitionTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/detailExhibitionTitle"
+
+        android:layout_marginTop="@dimen/spacing_400" />
+
+    <TextView
+        android:id="@+id/exhibitionLocationHeader" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_300"
+        android:textColor="@color/colorDetailExhibition"
+        android:text="장소"
+        android:lineSpacingExtra="-2sp"
+
+        app:layout_constraintStart_toStartOf="@id/detailExhibitionTitle"
+        app:layout_constraintTop_toBottomOf="@id/detailDivideView"
+
+        android:layout_marginTop="@dimen/spacing_675" />
+
+    <TextView
+        android:id="@+id/exhibitionLocationContents" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_300"
+        android:textColor="@color/colorDetailExhibition"
+        android:text="국립현대미술관 서울관"
+        android:lineSpacingExtra="-2sp"
+
+        app:layout_constraintTop_toTopOf="@id/exhibitionLocationHeader"
+        app:layout_constraintBottom_toBottomOf="@id/exhibitionLocationHeader"
+        app:layout_constraintStart_toEndOf="@id/exhibitionLocationHeader"
+
+        android:layout_marginStart="@dimen/spacing_600" />
+
+    <TextView
+        android:id="@+id/exhibitionPeriodHeader" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_300"
+        android:textColor="@color/colorDetailExhibition"
+        android:text="기간"
+        android:lineSpacingExtra="-2sp"
+
+        app:layout_constraintStart_toStartOf="@id/detailExhibitionTitle"
+        app:layout_constraintTop_toBottomOf="@id/exhibitionLocationHeader"
+
+        android:layout_marginTop="@dimen/spacing_250" />
+
+    <TextView
+        android:id="@+id/exhibitionPeriodContents" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_300"
+        android:textColor="@color/colorDetailExhibition"
+        android:text="2019.11.29 ~ 2019.12.21"
+        android:lineSpacingExtra="-2sp"
+
+        app:layout_constraintTop_toTopOf="@id/exhibitionPeriodHeader"
+        app:layout_constraintBottom_toBottomOf="@id/exhibitionPeriodHeader"
+        app:layout_constraintStart_toEndOf="@id/exhibitionLocationHeader"
+
+        android:layout_marginStart="@dimen/spacing_600" />
+
+    <TextView
+        android:id="@+id/exhibitionRestHeader" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_300"
+        android:textColor="@color/colorDetailExhibition"
+        android:text="휴관"
+        android:lineSpacingExtra="-2sp"
+
+        app:layout_constraintStart_toStartOf="@id/detailExhibitionTitle"
+        app:layout_constraintTop_toBottomOf="@id/exhibitionPeriodHeader"
+
+        android:layout_marginTop="@dimen/spacing_250" />
+
+    <TextView
+        android:id="@+id/exhibitionRestContents" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_300"
+        android:textColor="@color/colorDetailExhibition"
+        android:text="월요일, 전시 준비 기간"
+        android:lineSpacingExtra="-2sp"
+
+        app:layout_constraintTop_toTopOf="@id/exhibitionRestHeader"
+        app:layout_constraintBottom_toBottomOf="@id/exhibitionRestHeader"
+        app:layout_constraintStart_toEndOf="@id/exhibitionRestHeader"
+
+        android:layout_marginStart="@dimen/spacing_600" />
+
+    <TextView
+        android:id="@+id/exhibitionRequestHeader" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_300"
+        android:textColor="@color/colorDetailExhibition"
+        android:text="문의"
+        android:lineSpacingExtra="-2sp"
+
+        app:layout_constraintStart_toStartOf="@id/detailExhibitionTitle"
+        app:layout_constraintTop_toBottomOf="@id/exhibitionRestHeader"
+
+        android:layout_marginTop="@dimen/spacing_250" />
+
+    <TextView
+        android:id="@+id/exhibitionRequestContents" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_300"
+        android:textColor="@color/colorDetailExhibition"
+        android:text="02-395-3222"
+        android:lineSpacingExtra="-2sp"
+
+        app:layout_constraintTop_toTopOf="@id/exhibitionRequestHeader"
+        app:layout_constraintBottom_toBottomOf="@id/exhibitionRequestHeader"
+        app:layout_constraintStart_toEndOf="@id/exhibitionRequestHeader"
+
+        android:layout_marginStart="@dimen/spacing_600" />
+
+    <TextView
+        android:id="@+id/exhibitionPriceHeader" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_300"
+        android:textColor="@color/colorDetailExhibition"
+        android:text="가격"
+        android:lineSpacingExtra="-2sp"
+
+        app:layout_constraintStart_toStartOf="@id/detailExhibitionTitle"
+        app:layout_constraintTop_toBottomOf="@id/exhibitionRequestHeader"
+
+        android:layout_marginTop="@dimen/spacing_250" />
+
+    <TextView
+        android:id="@+id/exhibitionPriceContents" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_300"
+        android:textColor="@color/colorDetailExhibition"
+        android:text="무료"
+        android:lineSpacingExtra="-2sp"
+
+        app:layout_constraintTop_toTopOf="@id/exhibitionPriceHeader"
+        app:layout_constraintBottom_toBottomOf="@id/exhibitionPriceHeader"
+        app:layout_constraintStart_toEndOf="@id/exhibitionPriceHeader"
+
+        android:layout_marginStart="@dimen/spacing_600" />
+
+    <View
+        android:id="@+id/detailIntroduceView" android:layout_width="match_parent" android:layout_height="@dimen/spacing_25"
+        android:background="@color/grey_325"
+
+        app:layout_constraintTop_toBottomOf="@id/exhibitionPriceHeader"
+
+        android:layout_marginTop="@dimen/spacing_675" />
+
+    <TextView
+        android:id="@+id/detailIntroduceHeader" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_300"
+        android:textColor="@color/black_900"
+        android:textStyle="bold"
+        android:text="전시 소개"
+
+        app:layout_constraintStart_toStartOf="@id/detailExhibitionTitle"
+        app:layout_constraintTop_toBottomOf="@id/detailIntroduceView"
+
+        android:layout_marginTop="@dimen/spacing_500" />
+
+    <TextView
+        android:id="@+id/detailIntroduceContents" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_300"
+        android:textColor="@color/colorDetailExhibition"
+        android:text="작가 노트 \n\n 블라블라블라 \n 블라블라블라블라 ... "
+
+
+        app:layout_constraintStart_toStartOf="@id/detailExhibitionTitle"
+        app:layout_constraintTop_toBottomOf="@id/detailIntroduceHeader"
+
+        android:layout_marginTop="@dimen/spacing_500" />
+
+    <View
+        android:id="@+id/detailMapView" android:layout_width="match_parent" android:layout_height="@dimen/spacing_25"
+        android:background="@color/grey_325"
+
+        app:layout_constraintTop_toBottomOf="@id/detailIntroduceContents"
+
+        android:layout_marginTop="@dimen/spacing_650" />
+
+    <TextView
+        android:id="@+id/detailMapHeader" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_300"
+        android:textColor="@color/black_900"
+        android:textStyle="bold"
+        android:text="오시는길"
+
+        app:layout_constraintStart_toStartOf="@id/detailExhibitionTitle"
+        app:layout_constraintTop_toBottomOf="@id/detailMapView"
+
+        android:layout_marginTop="@dimen/spacing_500" />
+
+    <TextView
+        android:id="@+id/detailMapContents" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_300"
+        android:textColor="@color/colorDetailExhibition"
+        android:text="위치치치치 장소소소"
+
+
+        app:layout_constraintStart_toStartOf="@id/detailExhibitionTitle"
+        app:layout_constraintTop_toBottomOf="@id/detailMapHeader"
+
+        android:layout_marginTop="@dimen/spacing_250" />
+
+    <fragment
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/detailGoogleMap" android:layout_width="match_parent" android:layout_height="@dimen/spacing_2200"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+
+        app:layout_constraintTop_toBottomOf="@id/detailMapContents"
+
+        android:layout_marginTop="@dimen/spacing_375"
+        />
+
+    <TextView
+        android:id="@+id/detailVoice" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_300"
+        android:textColor="@color/black_900"
+        android:textStyle="bold"
+        android:text="관련 보이스"
+
+        app:layout_constraintStart_toStartOf="@id/detailExhibitionTitle"
+        app:layout_constraintTop_toBottomOf="@id/detailGoogleMap"
+
+        android:layout_marginTop="@dimen/spacing_525" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/detailVoiceRecycler" android:layout_width="match_parent" android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="@id/detailVoice"
+        app:layout_constraintTop_toBottomOf="@id/detailVoice"
+
+        android:layout_marginTop="@dimen/spacing_375" />
+
+    <View
+        android:id="@+id/detailBlogView" android:layout_width="match_parent" android:layout_height="@dimen/spacing_25"
+        android:background="@color/grey_325"
+
+        app:layout_constraintTop_toBottomOf="@id/detailVoiceRecycler"
+
+        android:layout_marginTop="@dimen/spacing_675" />
+
+    <TextView
+        android:id="@+id/detailBlogTitle" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_300"
+        android:textColor="@color/black_900"
+        android:textStyle="bold"
+        android:text="관련 블로그"
+
+        app:layout_constraintStart_toStartOf="@id/detailExhibitionTitle"
+        app:layout_constraintTop_toBottomOf="@id/detailBlogView"
+
+        android:layout_marginTop="@dimen/spacing_675" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/detailBlogRecycler" android:layout_width="match_parent" android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="@id/detailVoice"
+        app:layout_constraintTop_toBottomOf="@id/detailBlogTitle"
+
+        android:layout_marginTop="@dimen/spacing_250" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

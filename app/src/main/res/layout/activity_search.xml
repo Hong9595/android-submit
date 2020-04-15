@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tempConstraint"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.search.SearchActivity">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/searchToolbar" android:layout_width="0dp" android:layout_height="?attr/actionBarSize"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/exitSearchBtn" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:src="@drawable/ic_close_black_24dp"
+                    android:layout_gravity="start"
+
+                    android:layout_marginStart="@dimen/spacing_525"/>
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <com.example.arteum.util.ClearEditText
+                android:id="@+id/searchEditText" android:layout_width="268dp" android:layout_height="wrap_content"
+                android:hint="@string/search_hint"
+                android:textSize="@dimen/font_500"
+                android:textColor="@color/black_900"
+                android:textColorHint="@color/grey_325"
+                android:letterSpacing="0.01"
+                android:background="@null"
+                android:textCursorDrawable="@drawable/cursor_color_search"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+
+                app:layout_constraintTop_toBottomOf="@id/searchToolbar"
+                app:layout_constraintStart_toStartOf="parent"
+
+                android:layout_marginTop="@dimen/spacing_275"
+                android:layout_marginStart="@dimen/spacing_400">
+            </com.example.arteum.util.ClearEditText>
+
+
+            <ImageView
+                android:id="@+id/searchImage" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:src="@drawable/ic_search_black_24dp"
+
+                app:layout_constraintTop_toTopOf="@id/searchEditText"
+                app:layout_constraintBottom_toBottomOf="@id/searchEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                android:layout_marginEnd="@dimen/spacing_400">
+            </ImageView>
+
+            <View
+                android:id="@+id/searchLayoutView" android:layout_width="0dp" android:layout_height="1dp"
+                android:background="@color/grey_325"
+
+                app:layout_constraintTop_toBottomOf="@id/searchEditText"
+                app:layout_constraintStart_toStartOf="@id/searchEditText"
+                app:layout_constraintEnd_toEndOf="@id/searchImage"
+
+                android:layout_marginTop="@dimen/spacing_250">
+            </View>
+
+            <!-- height 0dp는 왜 안되지? top bottom 박아놨는데       -->
+            <FrameLayout
+                android:id="@+id/searchFrameLayout" android:layout_width="0dp" android:layout_height="match_parent"
+
+                app:layout_constraintStart_toStartOf="@id/searchLayoutView"
+                app:layout_constraintEnd_toEndOf="@id/searchLayoutView"
+                app:layout_constraintTop_toBottomOf="@id/searchLayoutView"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/noResultTv" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/no_search_result_1"
+                    android:textColor="@color/grey_350"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+
+
+                    android:layout_marginTop="@dimen/spacing_1400"
+                    />
+                <TextView
+                    android:id="@+id/noResultTvSub" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/no_search_result_2"
+                    android:textColor="@color/grey_350"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+
+                    android:layout_marginTop="@dimen/spacing_1500"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/searchRecycler" android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    />
+
+            </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

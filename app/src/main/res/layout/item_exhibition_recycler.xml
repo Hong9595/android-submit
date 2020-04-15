@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/spacing_2000"
+    android:layout_marginTop="@dimen/spacing_200"
+    android:layout_marginBottom="@dimen/spacing_200"
+    android:layout_marginStart="@dimen/spacing_50"
+    android:layout_marginEnd="@dimen/spacing_50">
+
+    <ImageView
+        android:id="@+id/exhibitionImage" android:layout_width="@dimen/spacing_1700" android:layout_height="@dimen/spacing_2000"
+        android:src="@drawable/login_background"
+        android:tint="@color/black_400"
+        />
+
+    <TextView
+        android:id="@+id/exhibitionTitle" android:layout_width="@dimen/spacing_1600" android:layout_height="wrap_content"
+        android:text="전시회제목"
+        android:textColor="@color/white_900"
+        android:textSize="@dimen/font_275"
+        android:textStyle="bold"
+        android:lineSpacingExtra="0sp"
+        android:layout_gravity="left|bottom"
+
+        android:singleLine="true"
+        android:ellipsize="end"
+
+        android:layout_marginStart="@dimen/spacing_125"
+        android:layout_marginBottom="@dimen/spacing_600"
+        />
+
+    <TextView
+        android:id="@+id/exhibitionSubTitle" android:layout_width="@dimen/spacing_1650" android:layout_height="wrap_content"
+        android:text="전시회 서브제목"
+        android:textColor="@color/white_900"
+        android:textSize="@dimen/font_200"
+        android:textStyle="bold"
+        android:lineSpacingExtra="0sp"
+        android:layout_gravity="left|bottom"
+
+        android:singleLine="true"
+        android:ellipsize="end"
+
+        android:layout_marginStart="@dimen/spacing_125"
+        android:layout_marginBottom="@dimen/spacing_225"
+        />
+
+</FrameLayout>

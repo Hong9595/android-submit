@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/spacing_250">
+
+    <ImageView
+        android:id="@+id/searchResultImage" android:layout_width="@dimen/spacing_1200" android:layout_height="@dimen/spacing_1200"
+        android:src="@mipmap/ic_launcher"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/searchResultTitle" android:layout_width="225dp" android:layout_height="wrap_content"
+        android:text="@string/searchResultTitle"
+        android:textColor="@color/black_900"
+        android:textSize="@dimen/font_275"
+        android:textStyle="bold"
+
+        android:singleLine="true"
+        android:ellipsize="end"
+
+
+        app:layout_constraintTop_toTopOf="@id/searchResultImage"
+        app:layout_constraintBottom_toTopOf="@id/searchResultLocation"
+        app:layout_constraintStart_toEndOf="@id/searchResultImage"
+
+        android:layout_marginStart="@dimen/spacing_375"
+        />
+
+    <TextView
+        android:id="@+id/searchResultLocation" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/searchResultLocation"
+        android:textColor="@color/grey_350"
+        android:textSize="@dimen/font_225"
+
+        app:layout_constraintTop_toBottomOf="@id/searchResultTitle"
+        app:layout_constraintBottom_toBottomOf="@id/searchResultImage"
+        app:layout_constraintStart_toStartOf="@id/searchResultTitle"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

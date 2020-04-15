@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.HomeMainActivity">
+
+    <TextView
+        android:id="@+id/myTitle" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="@dimen/font_500"
+        android:textColor="@color/colorBlack"
+        android:text="My"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_marginStart="@dimen/spacing_500"
+        android:layout_marginTop="@dimen/spacing_425"
+        />
+
+    <ImageView
+        android:id="@+id/userProfileImage" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+
+        app:layout_constraintStart_toStartOf="@id/myTitle"
+        app:layout_constraintTop_toBottomOf="@id/myTitle"
+
+        android:layout_marginTop="@dimen/spacing_600"
+        />
+
+    <TextView
+        android:id="@+id/userName" android:layout_width="wrap_content" android:layout_height="0dp"
+        android:text="유저이름"
+        android:textSize="@dimen/font_400"
+        android:textColor="@color/colorUserName"
+
+        app:layout_constraintStart_toEndOf="@id/userProfileImage"
+        app:layout_constraintTop_toTopOf="@id/userProfileImage"
+        app:layout_constraintBottom_toTopOf="@id/userEmail"
+
+        android:layout_marginStart="@dimen/spacing_375"
+        />
+
+    <TextView
+        android:id="@+id/userEmail" android:layout_width="wrap_content" android:layout_height="0dp"
+        android:text="usermail@naver.com"
+        android:textSize="@dimen/font_250"
+
+        app:layout_constraintTop_toBottomOf="@id/userName"
+        app:layout_constraintBottom_toBottomOf="@id/userProfileImage"
+        app:layout_constraintStart_toStartOf="@id/userName"
+
+        />
+
+    <View
+        android:id="@+id/userDivideView" android:layout_width="0dp" android:layout_height="1dp"
+        android:background="@color/grey_325"
+
+        app:layout_constraintTop_toBottomOf="@id/userProfileImage"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_marginTop="@dimen/spacing_675">
+    </View>
+
+    <TextView
+        android:id="@+id/myScrapText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/userDivideView"
+        android:text="MY 스크랩"
+        android:textColor="@color/black_900"
+        android:textSize="@dimen/font_350"
+        android:textStyle="bold"
+
+        android:layout_marginTop="@dimen/spacing_400"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_marginStart="@dimen/spacing_250"
+        />
+
+    <Button
+        android:id="@+id/signOutBtn" android:layout_width="@dimen/spacing_1500" android:layout_height="@dimen/spacing_750"
+        android:text="회원 탈퇴"
+        android:textColor="@color/white_900"
+        android:textSize="@dimen/font_250"
+        android:lineSpacingExtra="2sp"
+        android:background="@drawable/button_circle_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:layout_marginStart="@dimen/spacing_500"
+        android:layout_marginBottom="@dimen/spacing_500"
+        />
+
+    <Button
+        android:id="@+id/logoutBtn" android:layout_width="120dp" android:layout_height="36dp"
+        android:text="로그아웃"
+        android:textSize="@dimen/font_200"
+        android:textColor="@color/black_900"
+        android:background="@drawable/button_circle_white"
+
+        app:layout_constraintTop_toTopOf="@id/signOutBtn"
+        app:layout_constraintBottom_toBottomOf="@id/signOutBtn"
+        app:layout_constraintStart_toEndOf="@id/signOutBtn"
+
+        android:layout_marginStart="@dimen/spacing_250"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
